@@ -59,7 +59,7 @@
       <p><i>Technologies : C99, MPI, OpenMP, Cluster Grid5000</i></p>
     </td>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/Radouane-ANI/auctionp2p">🌐 AuctionP2P (Protocole Pair-à-Pair IPv6)</a></h4>
+      <h4><a href="https://github.com/Radouane-ANI/P2P-Auction-Protocol-IPv6">🌐 AuctionP2P (Protocole Pair-à-Pair IPv6)</a></h4>
       <p><b>Application distribuée d'enchères sécurisées en réseau décentralisé</b></p>
       <ul>
         <li>Architecture P2P résiliente en IPv6 natif avec découverte multicast et échanges TCP/UDP.</li>
