@@ -2,23 +2,28 @@
 
 # 👋 Radouane Aouini
 
-### 🎓 Étudiant en Master Cryptologie, Calcul de Haute Performance et Algorithmie (CCA)
-**Sorbonne Université / Université Paris Cité**
-
-*Cryptanalyse & Sécurité Logicielle • Calcul Haute Performance (MPI / OpenMP / CUDA) • Arithmétique Mixte • Algorithmique Avancée & Complexité*
+### 🎓 Ingénieur M2 — Cryptologie, Calcul Haute Performance (HPC) & Algorithmie
+**Sorbonne Université (Master CCA)** • *Licence Informatique (Université Paris Cité)*  
+*Paris, France*
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Radouane%20AOUINI-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/radouane-aouini-b14bab348)
+[![Email](https://img.shields.io/badge/Email-radouaneloo.aouini%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:radouaneloo.aouini@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Radouane--ANI-181717?style=for-the-badge&logo=github)](https://github.com/Radouane-ANI)
-[![Email](https://img.shields.io/badge/Contact-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:radouane.aouini@outlook.com)
+
+<br/>
+
+> *Spécialisé en cryptanalyse computationnelle, calcul parallèle et distribué haute performance (MPI, OpenMP, CUDA, vectorisation SIMD/AVX), arithmétique en précision mixte et algorithmique avancée.*
 
 ---
 
-### 💻 Technologies & Environnement Technique
+### 💻 Technologies & Boîte à Outils
 
 ![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
-![MPI](https://img.shields.io/badge/MPI-Parallel-blue?style=flat-square)
-![OpenMP](https://img.shields.io/badge/OpenMP-Multithreaded-orange?style=flat-square)
+![MPI](https://img.shields.io/badge/MPI-Distributed%20Computing-blue?style=flat-square)
+![OpenMP](https://img.shields.io/badge/OpenMP-Multithreading-orange?style=flat-square)
+![CUDA](https://img.shields.io/badge/CUDA-GPU%20Computing-76B900?style=flat-square&logo=nvidia&logoColor=white)
+![SIMD/AVX](https://img.shields.io/badge/SIMD-AVX2%2FAVX--512-red?style=flat-square)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![OCaml](https://img.shields.io/badge/OCaml-EC6813?style=flat-square&logo=ocaml&logoColor=white)
 ![MATLAB](https://img.shields.io/badge/MATLAB-e16737?style=flat-square&logo=mathworks&logoColor=white)
@@ -47,9 +52,9 @@
       <p><b>Attaque cryptanalytique distribuée massive sur supercalculateur Grid5000</b></p>
       <ul>
         <li>Recherche de collisions <i>golden claw</i> sur le chiffrement par bloc SPECK-64/128 (NSA).</li>
-        <li><b>Architecture Hybride MPI + OpenMP</b> (<code>MPI_THREAD_MULTIPLE</code>, sharding déterministe de la mémoire du dictionnaire).</li>
+        <li><b>Architecture Hybride MPI + OpenMP</b> (<code>MPI_THREAD_MULTIPLE</code>, sharding déterministe de la mémoire).</li>
         <li>Gestion fine de la contention avec <b>65 536 verrous <code>omp_lock_t</code></b> et pipeline asynchrone producteur-consommateur avec <code>#pragma omp task</code>.</li>
-        <li><b>Résultat Grid5000 :</b> Passage de <b>1 637 s (27 min) à 25,3 s</b>, soit une <b>accélération spectaculaire de ×65</b> face à la version séquentielle.</li>
+        <li><b>Résultat Grid5000 :</b> Passage de <b>1 637 s (27 min) à 25,3 s</b>, soit une <b>accélération spectaculaire de ×65</b> face à la référence séquentielle.</li>
       </ul>
       <p><i>Technologies : C99, MPI, OpenMP, Cluster Grid5000</i></p>
     </td>
@@ -73,14 +78,14 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/Radouane-ANI/Projet-cca">📊 GEP Mixte : Factorisation ILU en Précision Mixte</a></h4>
+      <h4><a href="https://github.com/Radouane-ANI/Adaptive-Mixed-Precision-ILU">📊 Adaptive-Mixed-Precision-ILU (GEP Mixte)</a></h4>
       <p><b>Préconditionnement adaptatif pour solveurs linéaires GMRES (Sous la direction de Théo Mary, LIP6)</b></p>
       <ul>
         <li>Conception d'un préconditionneur ILUT creux à allocation dynamique de précision (FP16, FP24, FP32, FP48, FP64) élément par élément.</li>
         <li>Critère d'affectation fondé sur la norme de colonne garantissant que l'erreur d'arrondi numérique ne dépasse pas la tolérance de chute $\varepsilon$.</li>
-        <li>Évaluation sur la collection de matrices <b>SuiteSparse</b> (réseaux électriques, réservoirs pétroliers, aérospatiale) : <b>compression mémoire jusqu'à 3.8×</b> avec 100% de convergence et profils de Dolan-Moré optimaux.</li>
+        <li>Évaluation sur la collection de matrices <b>SuiteSparse</b> : <b>compression mémoire jusqu'à 3.8×</b> avec 100% de convergence et profils de Dolan-Moré optimaux.</li>
       </ul>
-      <p><i>Technologies : MATLAB, Précision Mixte (chop), GMRES, LaTeX</i></p>
+      <p><i>Technologies : MATLAB, Précision Mixte (chop), GMRES, SuiteSparse</i></p>
     </td>
     <td width="50%" valign="top">
       <h4><a href="https://github.com/Radouane-ANI/Polynomial-Multiplication">🔢 Polynomial Multiplication & Stabilité MPFR</a></h4>
@@ -129,16 +134,16 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/Radouane-ANI/fsh-c">🐚 fsh-c (Shell Unix en C)</a></h4>
-      <p>Interpréteur de commandes Unix avec redirections <code>&lt;</code>, <code>&gt;</code>, <code>&gt;&gt;</code>, pipelines <code>|</code>, gestion de signaux POSIX et boucles de contrôle <code>for</code>.</p>
-      <h4><a href="https://github.com/Radouane-ANI/compilateur-simpletxt">📝 Compilateur SimpleText vers HTML</a></h4>
-      <p>Chaîne de compilation complète en OCaml (Lexer <code>ocamllex</code>, Parser <code>Menhir</code>, AST) avec table de macros dynamiques et génération HTML.</p>
+      <h4><a href="https://github.com/Radouane-ANI/POSIX-Unix-Shell-C">🐚 POSIX-Unix-Shell-C (fsh)</a></h4>
+      <p>Interpréteur de commandes Unix complet en C respectant les spécifications POSIX : redirections <code>&lt;</code>, <code>&gt;</code>, <code>&gt;&gt;</code>, pipelines <code>|</code>, gestion des processus (fork/exec), signaux et boucles de contrôle <code>for</code>.</p>
+      <h4><a href="https://github.com/Radouane-ANI/SimpleText-Compiler-OCaml">📝 SimpleText-Compiler-OCaml</a></h4>
+      <p>Chaîne de compilation complète en OCaml (Lexer <code>ocamllex</code>, Parser <code>Menhir</code>, AST) avec table de macros dynamiques et génération de code HTML propre.</p>
     </td>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/Radouane-ANI/dedale">🗺️ Dedale (Systèmes Multi-Agents JADE)</a></h4>
-      <p>Plateforme distribuée sous JADE pour l'exploration coopérative décentralisée et la traque coordonnée de créatures mobiles en environnement partiellement observable.</p>
-      <h4><a href="https://github.com/Radouane-ANI/big-match">💘 Big Match (Base de Données Relationnelle SQL)</a></h4>
-      <p>Modélisation relationnelle complète (E/A, 3NF), contraintes d'intégrité et requêtes analytiques avancées pour une application de rencontres culturelles.</p>
+      <h4><a href="https://github.com/Radouane-ANI/Dedale-MultiAgent-Systems">🗺️ Dedale-MultiAgent-Systems (JADE)</a></h4>
+      <p>Architecture multi-agents distribuée sous le framework JADE pour l'exploration coopérative décentralisée et la traque coordonnée de créatures mobiles en environnement dynamique.</p>
+      <h4><a href="https://github.com/Radouane-ANI/Cultural-Dating-Database-SQL">💘 Cultural-Dating-Database-SQL</a></h4>
+      <p>Modélisation relationnelle complète (E/A, 3NF), contraintes d'intégrité et requêtes analytiques SQL avancées pour une application de rencontres culturelles.</p>
     </td>
   </tr>
 </table>
